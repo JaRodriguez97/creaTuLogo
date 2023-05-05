@@ -6,21 +6,25 @@
       aria-hidden="true"
     ></fa-icon>
   </div>
-  <!-- <div class="banner__content" *ngIf="product">
+  <div class="banner__content" *ngIf="product">
     <div class="banner__content--contentBx">
       <h2>{{ product.nombre }}</h2>
-      <!--  !!!  existentes:  REF:  estrellas: !!!
       <p>
-        Nuestro combo está hecho con "{{ product.ingredientes }}" además incluye
-        "{{ product.incluye }}", tinene un peso de "{{ product.peso }}"
-      </p> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime animi
+        ullam quaerat mollitia, perspiciatis quia et porro vel nam magni iste
+        numquam dolorem rerum magnam assumenda suscipit optio! Magni, ad? Ullam
+        quod expedita explicabo cumque atque sint repellendus reiciendis quas.
+        Ipsam dolorem voluptatibus consectetur velit corrupti, libero unde quia
+        laborum. Voluptates sequi totam sint molestiae consectetur maxime rerum,
+        repellat laborum.
+      </p>
       <div class="banner__content--contentBx-inlineBlock">
-        <button
+        <!-- <button
           type="button"
-          title="Agregar al carrito de compras"
-          (click)="addToCar(product)"
+          title=""
+          (click)="('addToCar(product)')"
           class="cart-btn"
-          *ngIf="!existeCombo(product._id)"
+          *ngIf="'!existeCombo(product._id)'"
         >
           agregar
           <fa-icon [icon]="faShoppingCart"></fa-icon>
@@ -28,18 +32,18 @@
         <button
           type="button"
           title="Quitar del carrito de compras"
-          (click)="restToCar(product._id)"
+          (click)="('restToCar(product._id)')"
           class="cart-btn"
-          *ngIf="existeCombo(product._id)"
+          *ngIf="'existeCombo(product._id)'"
         >
           quitar
           <fa-icon [icon]="faArrowUpFromBracket"></fa-icon>
-        </button>
+        </button> -->
         <span>{{ product.precio | currency : "$" : "symbol" : "4.0-0" }}</span>
       </div>
     </div>
     <div class="banner__content--imgBx">
       <img [src]="product.img" [alt]="product.nombre" />
     </div>
-  </div> -->
+  </div>
 </section>

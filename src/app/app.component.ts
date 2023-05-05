@@ -104,31 +104,31 @@ export class AppComponent implements OnInit {
       );
   }
 
-  getOutSections() {
-    // this.renderer.addClass(this.header.nativeElement, 'noneDisplay');
-    // this.renderer.addClass(this.home.nativeElement, 'noneDisplay');
-    // this.renderer.addClass(this.about.nativeElement, 'noneDisplay');
-    // this.renderer.addClass(this.iconsContainer.nativeElement, 'noneDisplay');
-    // this.renderer.addClass(this.productsSection.nativeElement, 'noneDisplay');
-    // this.renderer.addClass(this.review.nativeElement, 'noneDisplay');
-    // this.renderer.addClass(this.contact.nativeElement, 'noneDisplay');
-    // this.renderer.addClass(this.footer.nativeElement, 'noneDisplay');
+  async getOutSections() {
+    this.renderer.addClass(this.header.nativeElement, 'noneDisplay');
+    this.renderer.addClass(this.home.nativeElement, 'noneDisplay');
+    this.renderer.addClass(this.about.nativeElement, 'noneDisplay');
+    this.renderer.addClass(this.iconsContainer.nativeElement, 'noneDisplay');
+    this.renderer.addClass(this.productsSection.nativeElement, 'noneDisplay');
+    this.renderer.addClass(this.review.nativeElement, 'noneDisplay');
+    this.renderer.addClass(this.contact.nativeElement, 'noneDisplay');
+    this.renderer.addClass(this.footer.nativeElement, 'noneDisplay');
   }
 
   closeSection() {
-    // this.renderer.removeClass(this.header.nativeElement, 'noneDisplay');
-    // this.renderer.removeClass(this.home.nativeElement, 'noneDisplay');
-    // this.renderer.removeClass(this.about.nativeElement, 'noneDisplay');
-    // this.renderer.removeClass(this.iconsContainer.nativeElement, 'noneDisplay');
-    // this.renderer.removeClass(
-    //   this.productsSection.nativeElement,
-    //   'noneDisplay'
-    // );
-    // this.renderer.removeClass(this.review.nativeElement, 'noneDisplay');
-    // this.renderer.removeClass(this.contact.nativeElement, 'noneDisplay');
-    // this.renderer.removeClass(this.footer.nativeElement, 'noneDisplay');
+    this.renderer.removeClass(this.header.nativeElement, 'noneDisplay');
+    this.renderer.removeClass(this.home.nativeElement, 'noneDisplay');
+    this.renderer.removeClass(this.about.nativeElement, 'noneDisplay');
+    this.renderer.removeClass(this.iconsContainer.nativeElement, 'noneDisplay');
+    this.renderer.removeClass(
+      this.productsSection.nativeElement,
+      'noneDisplay'
+    );
+    this.renderer.removeClass(this.review.nativeElement, 'noneDisplay');
+    this.renderer.removeClass(this.contact.nativeElement, 'noneDisplay');
+    this.renderer.removeClass(this.footer.nativeElement, 'noneDisplay');
 
-    // this.router.navigate(['/']);
+    this.router.navigate(['/']);
   }
 
   // getOrder() {

@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AppComponent } from '@app/app.component';
-// import { OrderComponent } from '@components/order/pre-order/order.component';
+import { ProductsService } from '@services/Products/products.service';
 import {
   faArrowUpFromBracket,
   faShoppingCart,
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
-// import { productInterface } from '@models/products.interface';
-// import { ProductsService } from '@service/Products/products.service';
+import { productInterface } from '@models/products.interface';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
@@ -17,14 +16,13 @@ import { NgxSpinnerService } from 'ngx-spinner';
   styleUrls: ['./products-details.component.css'],
 })
 export class ProductsDetailsComponent implements OnInit {
-  // product!: productInterface;
+  product!: productInterface;
   faXmark = faXmark;
   faShoppingCart = faShoppingCart;
   faArrowUpFromBracket = faArrowUpFromBracket;
 
   constructor(
-    // public productsService: ProductsService,
-    // public orderComponent: OrderComponent,
+    public productsService: ProductsService,
     private spinner: NgxSpinnerService,
     public appComponent: AppComponent,
     private activatedRouter: ActivatedRoute
@@ -34,25 +32,11 @@ export class ProductsDetailsComponent implements OnInit {
     this.spinner.show().then(() => {
       let { id } = this.activatedRouter.snapshot.params;
 
-      // this.productsService.getProduct(id).subscribe(
-      //   (res) => (this.product = res),
-      //   (err) => console.error(err),
-      //   () => this.spinner.hide()
-      // );
+      this.productsService.getProduct(id).subscribe(
+        (res) => (this.product = res),
+        (err) => console.error(err),
+        () => this.spinner.hide()
+      );
     });
   }
-
-  // addToCar(product: productInterface, i?: number) {
-  //   this.spinner.show().then(() => this.appComponent.addToCar(product, i));
-  // }
-
-  // existeCombo(id: string) {
-  //   return this.appComponent.pedidos?.some(
-  //     (productPedido) => productPedido._id == id
-  //   );
-  // }
-
-  // restToCar(_id: string, i?: number) {
-  //   this.appComponent.restToCar(_id, i);
-  // }
 }

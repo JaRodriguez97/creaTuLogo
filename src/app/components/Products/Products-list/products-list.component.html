@@ -1,0 +1,61 @@
+<h1 class="heading">ultimos <span>diseños</span></h1>
+
+<div class="box-container">
+  <!-- <div class="box" *ngFor="let product of products; let i = index">
+    <span class="discount">-{{ product.descuento }}%</span>
+    <div class="image">
+      <img [src]="product.img!" [alt]="product.nombre" />
+      <ul
+        [ngClass]="{
+          iconsList: true,
+          active: existeCombo(product._id)
+        }"
+      >
+        <li
+          (click)="appComponent.addFavorite(product._id)"
+          [title]="
+            appComponent.validateFavorite(product._id)
+              ? 'Quitar de Favoritos'
+              : 'Agregar a Favoritos'
+          "
+          [ngClass]="{ active: appComponent.validateFavorite(product._id) }"
+        >
+          <fa-icon [icon]="faHeart"></fa-icon>
+        </li>
+        <li
+          title="Agregar al carrito de compras"
+          (click)="addToCar(product, i)"
+          class="cart-btn"
+          *ngIf="!existeCombo(product._id)"
+        >
+          agregar
+          <fa-icon [icon]="faShoppingCart"></fa-icon>
+        </li>
+        <li
+          title="Quitar del carrito de compras"
+          (click)="restToCar(product._id, i)"
+          class="cart-btn"
+          *ngIf="existeCombo(product._id)"
+        >
+          quitar
+          <fa-icon [icon]="faArrowUpFromBracket"></fa-icon>
+        </li>
+        <li (click)="getDetails(product['_id'])" title="Ver Detalles">
+          <fa-icon [icon]="faEye"></fa-icon>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <h3>{{ product["nombre"] }}</h3>
+      <div class="price">
+        <span>
+          Precio original:
+          {{ product["precio"] | currency : "$" : "symbol" : "4.0-0" }}
+        </span>
+        <br />
+        <p>Precio con descuento:</p>
+        {{ getTotalDescuento(product) | currency : "$" : "symbol" : "4.0-0" }}
+      </div>
+    </div>
+  </div> -->
+</div>

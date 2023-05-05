@@ -1,0 +1,305 @@
+.noneDisplay {
+  display: none !important;
+}
+
+/* header section starts  */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+header.active {
+  box-shadow: 0 0.5rem 1rem var(--gray);
+}
+
+header label {
+  display: none;
+}
+
+header .logo {
+  font-size: 3rem;
+  color: var(--smoke);
+  font-weight: bolder;
+}
+
+header.active .logo {
+  color: var(--golden);
+}
+
+header .logo span {
+  color: var(--golden);
+}
+
+header.active .logo span {
+  color: var(--smoke);
+}
+
+header .navbar a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: var(--smoke);
+}
+
+header.active .navbar a {
+  color: var(--golden);
+}
+
+header .navbar a:hover {
+  color: var(--golden);
+}
+
+header.active .navbar a:hover {
+  color: var(--gray);
+}
+
+header .icons {
+  gap: 1.5rem;
+  display: flex;
+}
+
+header .icons fa-icon {
+  font-size: 2.5rem;
+  color: var(--smoke);
+  cursor: pointer;
+}
+
+header .icons fa-icon.active::before {
+  content: "";
+  /* background: red;
+  height: 1.2rem;
+  width: 1rem;
+  position: absolute;
+  bottom: 50%;
+  transform: scaleX(-1); */
+}
+
+header .icons fa-icon.active,
+header.active .icons fa-icon {
+  color: var(--golden);
+  transition: 0s;
+}
+
+header .icons fa-icon:hover {
+  color: var(--golden);
+  transition: 0s;
+}
+
+header.active .icons fa-icon:hover {
+  color: var(--smoke);
+}
+
+header #toggler {
+  display: none;
+}
+
+header .fa-bars {
+  font-size: 3rem;
+  color: var(--smoke);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 0.1rem solid var(--white);
+  display: none;
+}
+/* header section ends */
+
+/* order section starts */
+
+.user,
+.order,
+app-order,
+app-user {
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.user,
+.order {
+  top: 0;
+  right: -100%;
+  position: fixed;
+}
+
+.user.active,
+.order.active {
+  right: 0;
+}
+
+/* order section ends */
+
+/* home section starts */
+app-inicio,
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  gap: 20rem;
+}
+/* home section ends */
+
+/*  icons section starts  */
+.icons-container {
+  background: var(--black);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+app-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+/*  icons section ends  */
+
+/* footer section starts */
+
+.footer {
+  background-color: #000;
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .box-container .box {
+  flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+  color: var(--white);
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  text-decoration: underline;
+}
+
+.footer .box-container .box a {
+  display: block;
+  color: var(--smoke);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover {
+  color: var(--golden);
+  text-decoration: underline;
+}
+
+.footer .box-container .box img {
+  margin-top: 1rem;
+}
+
+.footer .credit {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: var(--white);
+  border-top: 0.1rem solid var(--white);
+  padding-bottom: 9rem;
+}
+
+.footer .credit a {
+  color: var(--golden);
+}
+
+/* footer section ends */
+
+@media (max-width: 991px) {
+  header {
+    padding: 2rem;
+  }
+
+  app-inicio {
+    gap: 3rem;
+    flex-direction: column-reverse;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    justify-content: space-around;
+  }
+
+  header label {
+    display: block;
+  }
+
+  header .logo {
+    margin-right: auto;
+    margin-left: 3rem;
+    font-size: 2.5rem;
+  }
+
+  header .fa-bars {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    border-top: 0.1rem solid var(--smoke);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header #toggler:checked ~ .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header.active .navbar a:hover {
+    color: var(--white);
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: var(--gray);
+    border: 0.1rem solid var(--smoke);
+    border-radius: 0.5rem;
+    display: block;
+  }
+
+  .home .content h3 {
+    font-size: 5rem;
+  }
+
+  .home .content span {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  header .logo {
+    margin-right: auto;
+    margin-left: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+}

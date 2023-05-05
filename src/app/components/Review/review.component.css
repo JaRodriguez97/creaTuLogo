@@ -1,0 +1,58 @@
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.box-container .box {
+  flex: 1 1 30rem;
+  box-shadow: 0 0.5rem 1.5rem var(--smoke);
+  border-radius: 0.5rem;
+  padding: 3rem 2rem;
+  position: relative;
+  border: 0.1rem solid var(--smoke);
+}
+
+.box-container .box .fa-quote-right {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 6rem;
+  color: var(--gray);
+}
+
+.box-container .box .stars i {
+  color: var(--golden);
+  font-size: 2rem;
+}
+
+.box-container .box p {
+  color: var(--smoke);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding-top: 2rem;
+}
+
+.box-container .box .user {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.box-container .box .user img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.box-container .box .user h3 {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.box-container .box .user span {
+  font-size: 1.5rem;
+  color: var(--smoke);
+}

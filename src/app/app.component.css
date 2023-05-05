@@ -9,7 +9,7 @@ header {
   left: 0;
   right: 0;
   background: var(--black);
-  padding: 2rem 9%;
+  padding: 2rem 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,34 +65,44 @@ header .icons {
   display: flex;
 }
 
-header .icons fa-icon {
-  font-size: 2.5rem;
-  color: var(--smoke);
-  cursor: pointer;
+header .icons a {
+  display: flex;
 }
 
-header .icons fa-icon.active::before {
-  content: "";
-  /* background: red;
-  height: 1.2rem;
-  width: 1rem;
-  position: absolute;
-  bottom: 50%;
-  transform: scaleX(-1); */
+header .icons i {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  filter: invert(1);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition-delay: 0.5s;
 }
 
-header .icons fa-icon.active,
-header.active .icons fa-icon {
+header .icons .facebook {
+  background-image: url(../assets/icons/messenger.svg);
+}
+
+header .icons .instagram {
+  background-image: url(../assets/icons/instagram.svg);
+}
+
+header .icons .whatsapp {
+  background-image: url(../assets/icons/whatsapp.svg);
+}
+
+header .icons i.active,
+header.active .icons i {
   color: var(--golden);
   transition: 0s;
 }
 
-header .icons fa-icon:hover {
+header .icons i:hover {
   color: var(--golden);
   transition: 0s;
 }
 
-header.active .icons fa-icon:hover {
+header.active .icons i:hover {
   color: var(--smoke);
 }
 
@@ -159,7 +169,6 @@ app-inicio,
 
 app-icons-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5rem;
 }
 /*  icons section ends  */
@@ -238,6 +247,10 @@ app-icons-container {
 }
 
 @media (max-width: 768px) {
+  app-icons-container {
+    flex-wrap: wrap;
+  }
+
   header {
     justify-content: space-around;
   }

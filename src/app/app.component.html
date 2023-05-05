@@ -9,7 +9,7 @@
 
 <!-- !!! header section starts  !!! -->
 <header #header>
-  <input placeholder="" title="hide" type="checkbox" name="" id="toggler" />
+  <input title="hide" type="checkbox" name="toggler" id="toggler" />
   <label for="toggler">
     <fa-icon [icon]="faBars" aria-hidden="true" class="fa-bars"></fa-icon>
   </label>
@@ -25,33 +25,24 @@
   </nav>
 
   <div class="icons">
-    <fa-icon [icon]="faHeart" aria-hidden="true"></fa-icon>
-    <fa-icon
-      [ngClass]="{ active: 'pedidos && pedidos.length' }"
-      [icon]="faShoppingCart"
-      aria-hidden="true"
-    ></fa-icon>
-    <fa-icon [icon]="faUser" aria-hidden="true"></fa-icon>
+    <a
+      href="https://www.facebook.com/profile.php?id=100064206601732&mibextid=ZbWKwL"
+      target="_blank"
+    >
+      <i class="facebook"></i>
+    </a>
+    <a
+      href="https://instagram.com/crea.tulogotipo?igshid=ZDdkNTZiNTM="
+      target="_blank"
+    >
+      <i class="instagram"></i>
+    </a>
+    <a href="https://wa.link/2866m3" target="_blank"
+      ><i class="whatsapp"></i
+    ></a>
   </div>
 </header>
 <!-- !!! header section ends !!! -->
-
-<!-- !!! favorites section starts !!! -->
-<!-- <section class="favorites" #favorites>
-  <app-favorites [favoritos]="user?.favoritos"></app-favorites>
-</section> -->
-
-<!-- !!! order section starts !!! -->
-<!-- <section class="order" #order>
-  <app-order [user]="user"></app-order>
-</section> -->
-<!-- !!! order section ends !!! -->
-
-<!-- !!! user section starts !!! -->
-<!-- <section class="user" #userInfo>
-  <app-user [user]="user!"></app-user>
-</section> -->
-<!-- !!! user section ends !!! -->
 
 <!-- !!! home section starts  !!! -->
 <section class="home" id="home" #home>
@@ -100,12 +91,20 @@
       <a href="#contact">contáctanos</a>
     </div>
 
-    <!-- <div class="box"> REDES SOCIALES
-      <h3>enlaces extras</h3>
-      <a href="#footer" (click)="getUser()">mi cuenta</a>
-      <a href="#footer" (click)="getOrder()">mi pedido</a>
-      <a href="#footer">mis favoritos</a>
-    </div> -->
+    <div class="box">
+      <h3>redes sociales</h3>
+      <a
+        href="https://www.facebook.com/profile.php?id=100064206601732&mibextid=ZbWKwL"
+        target="_blank"
+        >Facebook</a
+      >
+      <a
+        href="https://instagram.com/crea.tulogotipo?igshid=ZDdkNTZiNTM="
+        target="_blank"
+        >Instagram</a
+      >
+      <a href="https://wa.link/2866m3" target="_blank">WhatsApp</a>
+    </div>
 
     <div class="box">
       <h3>localización</h3>

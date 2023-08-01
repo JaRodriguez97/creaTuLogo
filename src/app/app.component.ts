@@ -17,7 +17,6 @@ import {
   faBars,
   faHeart,
   faShoppingCart,
-   
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -35,6 +34,7 @@ export class AppComponent implements OnInit {
   faUser: IconDefinition = faUser;
   faBars: IconDefinition = faBars;
   paragraphSpinner!: string;
+  iterating!: any[];
 
   // !!! Sections !!!
 
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:scroll')
   scrolling(): void {
-    if (window.scrollY > 300)
+    if (window.scrollY > 80)
       this.renderer.addClass(this.header.nativeElement, 'active');
     else this.renderer.removeClass(this.header.nativeElement, 'active');
   }
@@ -67,6 +67,19 @@ export class AppComponent implements OnInit {
     this.paragraphSpinner = 'Cargando...';
     this.spinner
       .show()
+      .then(
+        () =>
+          (this.iterating = [
+            this.header.nativeElement,
+            this.home.nativeElement,
+            this.about.nativeElement,
+            this.iconsContainer.nativeElement,
+            this.productsSection.nativeElement,
+            this.review.nativeElement,
+            this.contact.nativeElement,
+            this.footer.nativeElement,
+          ])
+      )
       .then(() =>
         this.document.location.pathname !== '/'
           ? this.getOutSections()

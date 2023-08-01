@@ -1,10 +1,11 @@
 .content {
   max-width: 50rem;
+  z-index: 1;
 }
 
 .content h3 {
   font-size: 5.5rem;
-  color: var(--white);
+  color: var(--blackPanter);
 }
 
 .content span {
@@ -15,8 +16,8 @@
 }
 
 .content p {
-  font-size: 1.5rem;
-  color: var(--smoke);
+  font-size: 2rem;
+  color: var(--black);
   padding: 1rem 0;
   line-height: 1.5;
 }

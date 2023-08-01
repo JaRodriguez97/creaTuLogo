@@ -44,6 +44,10 @@ app-login {
   z-index: 10;
 }
 
+p {
+  text-transform: none;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -87,7 +91,7 @@ app-login {
 .heading {
   text-align: center;
   font-size: 4rem;
-  color: var(--white);
+  color: var(--black);
   padding: 1rem;
   margin: 2rem 0;
   background: var(--goldenLigth);

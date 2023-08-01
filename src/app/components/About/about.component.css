@@ -14,7 +14,7 @@
 
 .row .video-container video {
   width: 100%;
-  border: 1.5rem solid var(--white);
+  border: 1.5rem solid var(--smoke);
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   height: 100%;
@@ -26,7 +26,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 3rem;
-  background: var(--white);
+  background: var(--smoke);
   width: 100%;
   padding: 1rem 2rem;
   text-align: center;
@@ -39,12 +39,12 @@
 
 .row .content h3 {
   font-size: 3rem;
-  color: var(--white);
+  color: var(--black);
 }
 
 .row .content p {
   font-size: 1.5rem;
-  color: var(--smoke);
+  color: var(--black);
   padding: 0.5rem 0;
   padding-top: 1rem;
   line-height: 1.5;

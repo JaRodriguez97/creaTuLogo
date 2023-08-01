@@ -161,7 +161,7 @@ app-inicio,
 
 /*  icons section starts  */
 .icons-container {
-  background: var(--black);
+  background: var(--smoke);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }

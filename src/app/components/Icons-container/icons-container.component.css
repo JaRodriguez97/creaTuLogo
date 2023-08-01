@@ -1,6 +1,6 @@
 .icons {
-  background: #000;
-  border: 0.1rem solid var(--black);
+  background: #fff;
+  border: 0.1rem solid var(--smoke);
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -11,17 +11,16 @@
 .icons img {
   height: 5rem;
   margin-right: 2rem;
-  filter: invert(1);
 }
 
 .icons h3 {
-  color: var(--white);
+  color: var(--black);
   padding-bottom: 0.5rem;
   font-size: 1.5rem;
 }
 
 .icons span {
-  color: var(--smoke);
+  color: var(--black);
   font-size: 1.3rem;
 }
 

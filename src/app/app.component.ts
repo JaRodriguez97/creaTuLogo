@@ -20,7 +20,6 @@ import {
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { NgxSpinnerService } from 'ngx-spinner';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',

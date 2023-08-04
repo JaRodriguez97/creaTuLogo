@@ -196,7 +196,7 @@ app-icons-container {
 
 .footer .box-container .box a {
   display: block;
-  color: var(--black);
+  color: var(--smoke);
   font-size: 1.5rem;
   padding: 1rem 0;
 }

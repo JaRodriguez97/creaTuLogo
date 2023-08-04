@@ -6,7 +6,7 @@
   flex-direction: column;
   display: flex;
   justify-content: center;
-  background: linear-gradient(#404040, #151415);
+  /* background: linear-gradient(var(--white), var(--backPrincipal)); */
 }
 
 .banner::before {
@@ -78,14 +78,14 @@
 .banner__content--contentBx > h2 {
   font-size: 4em;
   line-height: 1em;
-  color: #fff;
+  color: var(--blackPanter);
   text-transform: uppercase;
   margin: 0;
 }
 
 .banner__content--contentBx > p {
-  font-size: 1em;
-  color: rgb(255, 255, 255);
+  font-size: 2em;
+  color: var(--gray);
   margin: 20px 10px 10px 0;
 }
 
@@ -117,7 +117,7 @@
 .banner__content--contentBx-inlineBlock > span {
   font-size: 2em;
   line-height: 1em;
-  color: #fff;
+  color: var(--blackPanter);
   text-transform: uppercase;
   width: max-content;
 }

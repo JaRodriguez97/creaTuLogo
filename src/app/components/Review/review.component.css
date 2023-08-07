@@ -11,6 +11,7 @@
   padding: 3rem 2rem;
   position: relative;
   border: 0.1rem solid var(--smoke);
+  background: var(--backPrincipal);
 }
 
 .box-container .box .fa-quote-right {

@@ -1,6 +1,6 @@
 :root {
-  --golden: #e3b55a;
-  --goldenLigth: #fdf3df;
+  --golden: rgb(247, 201, 69);
+  --goldenLigth: rgb(253, 243, 216);
   --blackPanter: #111;
   --black: #333;
   --gray: #666;
@@ -27,6 +27,12 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
   overflow-x: hidden;
+  background-image: url(./assets/images/FONDO-PPP.jpg);
+  background-repeat: repeat;
+  background-size: 350px;
+  background-attachment: fixed;
+  background-blend-mode: color;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 section,
